@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  task_webserver:
+    image: sp-task-webserver
+    container_name: sp-task-webserver
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/var/www/html/
+    build:
+      context: .
+      dockerfile: Dockerfile
